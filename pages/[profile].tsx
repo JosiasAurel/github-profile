@@ -77,7 +77,7 @@ const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.El
             blog={userObj.blog}
              />
              <div className={styles.downloadButtonContainer}>
-                 <button onClick={() => exportComponentAsPNG(targetImage)}>
+                 <button>
                      <img 
                      src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" 
                      alt="download"/>
