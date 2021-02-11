@@ -7,7 +7,7 @@
 }
 
 .downloadButtonContainer {
-    z-index: 10;
+    z-index: 20;
     position: relative;
     right: 15em;
     top: 15em;

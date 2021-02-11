@@ -1,12 +1,14 @@
 import React, { FunctionComponent, useRef, useEffect } from "react"
 
-import { exportComponentAsPNG } from "react-component-export-image"
+import dynamic from "next/dynamic"
 
 import { GetServerSideProps } from "next"
 
 import Profile from "../components/profile"
 
 import styles from "./profile.module.css"
+
+const ConvertImage = dynamic(() => import("react-convert-image"), {ssr: false} )
 
 type Data = {
     
@@ -63,10 +65,14 @@ type pageProp = {
 
 
 const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.Element => {
+    let targetImage = useRef()
+
     return (
         <div>
             <div className={styles.cardContainer}>
-            <Profile 
+            <div>
+                <Profile 
+            ref={targetImage}
             name={userObj.name} 
             photo={userObj.avatar}
             location={userObj.location}
@@ -77,14 +83,8 @@ const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.El
             following={userObj.following}
             blog={userObj.blog}
              />
+            </div>
         </div>
-        <div className={styles.downloadButtonContainer}>
-                 <button>
-                     <img 
-                     src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" 
-                     alt="download"/>
-                 </button>
-             </div>
         </div>
     )
 }
