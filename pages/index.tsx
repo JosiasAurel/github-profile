@@ -10,7 +10,8 @@ const Index: FunctionComponent = (): JSX.Element => {
     }
     return (
         <div className={styles.mainIndexPage}>
-            <form onSubmit={formSubmit}>
+            <div>
+                <form onSubmit={formSubmit}>
                 <h2 className={styles.title}>Get your GitHub Profile Card</h2>
                 <input 
                 value={profile} 
@@ -20,6 +21,11 @@ const Index: FunctionComponent = (): JSX.Element => {
                 onChange={(e) => setProfile(e.target.value)}
                 />
             </form>
+
+            <footer>
+                <p>Coded by <a href="https://josiasaurel.tech">Josias Aurel</a></p>
+            </footer>
+            </div>
         </div>
     )
 }
