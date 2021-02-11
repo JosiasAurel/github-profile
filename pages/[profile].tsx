@@ -1,4 +1,6 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useRef, useEffect } from "react"
+
+import { exportComponentAsPNG } from "react-component-export-image"
 
 import { GetServerSideProps } from "next"
 
@@ -55,10 +57,12 @@ type pageProp = {
     public_repos: number,
     email: any,
     followers: number,
-    following: number
+    following: number,
+    userObj: any
 }
 
-const ProfileCard: FunctionComponent<pageProp> = ({ userObj }): JSX.Element => {
+
+const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.Element => {
     return (
         <div className={styles.cardContainer}>
             <Profile 
@@ -72,6 +76,13 @@ const ProfileCard: FunctionComponent<pageProp> = ({ userObj }): JSX.Element => {
             following={userObj.following}
             blog={userObj.blog}
              />
+             <div className={styles.downloadButtonContainer}>
+                 <button onClick={() => exportComponentAsPNG(targetImage)}>
+                     <img 
+                     src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" 
+                     alt="download"/>
+                 </button>
+             </div>
         </div>
     )
 }
