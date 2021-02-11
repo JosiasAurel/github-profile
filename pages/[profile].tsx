@@ -63,8 +63,14 @@ const ProfileCard: FunctionComponent<pageProp> = ({ userObj }): JSX.Element => {
         <div className={styles.cardContainer}>
             <Profile 
             name={userObj.name} 
+            photo={userObj.avatar}
             location={userObj.location}
             username={userObj.login}
+            bio={userObj.bio}
+            twitter={userObj.twitter}
+            followers={userObj.followers}
+            following={userObj.following}
+            blog={userObj.blog}
              />
         </div>
     )

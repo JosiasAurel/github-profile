@@ -6,6 +6,7 @@
     color: white;
     z-index: 4;
     border-radius: 6px;
+    max-width: 450px;
 }
 
 .imageContainer {
@@ -13,7 +14,10 @@
     max-width: 100px;
     max-height: 100px;
     border-radius: 50%;
-    margin-right: 2em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainInfo {
@@ -24,9 +28,31 @@
 }
 
 .mainInfo > span {
-    margin-left: 1.5em;
+    margin-left: 1em;
 }
 
 .mainInfo > span > p {
     color: grey;
+}
+
+.follow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.follow > p {
+    color: rgb(6, 103, 248);
+}
+
+.blog {
+    text-decoration: none;
+    color: grey;
+}
+
+.userImage {
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 50%;
 }
