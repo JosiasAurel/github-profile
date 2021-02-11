@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 1em 0 1em;
 }
 
 .title {
@@ -11,6 +12,7 @@
     font-family: cursive;
     font-size: 200%;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .username {
@@ -23,8 +25,8 @@
     font-size: 100%;
     font-family: cursive;
     color: white;
-    word-wrap: break-word;
-    margin: 0 1em 0 1em;
+    
+    text-align: center;
 }
 
 .username:focus {

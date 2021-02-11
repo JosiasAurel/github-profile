@@ -1,0 +1,32 @@
+
+.profileCard {
+    padding: 2em;
+    background-color: #30363d;
+    box-shadow: 0 0 4px 8px #3a0ca3;
+    color: white;
+    z-index: 4;
+    border-radius: 6px;
+}
+
+.imageContainer {
+    border: solid 2px rgb(255, 7, 61);
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mainInfo > span {
+    margin-left: 1.5em;
+}
+
+.mainInfo > span > p {
+    color: grey;
+}
