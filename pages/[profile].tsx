@@ -64,7 +64,8 @@ type pageProp = {
 
 const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.Element => {
     return (
-        <div className={styles.cardContainer}>
+        <div>
+            <div className={styles.cardContainer}>
             <Profile 
             name={userObj.name} 
             photo={userObj.avatar}
@@ -76,7 +77,8 @@ const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.El
             following={userObj.following}
             blog={userObj.blog}
              />
-             <div className={styles.downloadButtonContainer}>
+        </div>
+        <div className={styles.downloadButtonContainer}>
                  <button>
                      <img 
                      src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" 
