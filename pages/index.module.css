@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 .mainIndexPage {
     height: 90vh;
@@ -5,6 +6,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 1em 0 1em;
+    font-family: 'Patrick Hand', cursive;
 }
 
 .title {
