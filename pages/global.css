@@ -4,3 +4,11 @@
     font-family: "Open Sans";
     box-sizing: border-box;
 }
+
+body {
+    background-color: #3a0ca3;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
