@@ -1,14 +1,11 @@
 import React, { FunctionComponent, useRef, useEffect } from "react"
 
-import dynamic from "next/dynamic"
-
 import { GetServerSideProps } from "next"
 
 import Profile from "../components/profile"
 
 import styles from "./profile.module.css"
 
-const ConvertImage = dynamic(() => import("react-convert-image"), {ssr: false} )
 
 type Data = {
     
@@ -65,14 +62,12 @@ type pageProp = {
 
 
 const ProfileCard: FunctionComponent<pageProp> = ({ userObj }: pageProp): JSX.Element => {
-    let targetImage = useRef()
 
     return (
         <div>
             <div className={styles.cardContainer}>
             <div>
                 <Profile 
-            ref={targetImage}
             name={userObj.name} 
             photo={userObj.avatar}
             location={userObj.location}
