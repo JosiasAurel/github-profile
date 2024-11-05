@@ -25,7 +25,7 @@
   "homepage": "https://github.com/JosiasAurel/github-profile#readme",
   "dependencies": {
     "@types/node": "^14.14.25",
-    "next": "^10.0.6",
+    "next": "^15.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
